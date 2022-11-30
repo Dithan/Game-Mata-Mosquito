@@ -1,0 +1,123 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+  font-size: 1rem;
+}
+
+html {
+  cursor: url(./imagens/mata_mosca.png) 30 30, auto;
+}
+
+img {
+  max-width: 100%;
+  max-height: 100%;
+  display: block;
+  object-fit: cover;
+}
+
+body {
+  background-image: url('./imagens/bg.jpg');
+  background-repeat: no-repeat;
+  background-size: 100%;
+  background-position: 0px -180px;
+}
+
+.mosquito1 {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+}
+
+.mosquito2 {
+  display: inline-block;
+  width: 70px;
+  height: 70px;
+}
+
+.mosquito3 {
+  display: inline-block;
+  width: 90px;
+  height: 90px;
+}
+
+.ladoA {
+  transform: scaleX(1);
+}
+
+.ladoB {
+  transform: scaleX(-1);
+}
+
+.painel {
+  position: absolute;
+  width: 190px;
+  padding: 10px;
+  bottom: 0px;
+  border-top: solid 1px #ffffff;
+  border-radius: 5px;
+  background: #ffffff3a;
+}
+
+.vidas {
+  float: left;
+  display: flex;
+  gap: 10px;
+}
+
+.cronometro {
+  float: left;
+  font-size: 1rem;
+  font-weight: bold;
+}
+
+.picGameOver {
+  display: flex;
+  max-width: 500px;
+  margin: 30px auto;
+}
+
+.restart,
+.iniciarBtn {
+  display: flex;
+  justify-content: center;
+}
+
+.restart a,
+.iniciar {
+  text-decoration: none;
+  color: #ffffff;
+  padding: 10px 20px;
+  background: #00000093;
+  border-radius: 10px;
+  font-size: 2rem;
+  cursor: pointer;
+}
+
+.restart a:hover,
+.iniciar:hover,
+select:hover {
+  background: #000000d4;
+}
+
+.opicoes {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 20px;
+}
+
+select {
+  padding: 5px;
+  border-radius: 5px;
+  margin: 0 auto;
+  background-color: rgba(0, 0, 0, 0.708);
+  color: #ffffff;
+  font-size: 1.25rem;
+}
+
+@media (max-width: 1080px) {
+  body {
+    background-size: auto;
+  }
+}

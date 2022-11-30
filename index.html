@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Game Mata Mosquito</title>
+  <link rel="stylesheet" href="./style.css">
+</head>
+
+<body>
+  <picture class="picGameOver"><img src="./imagens/game.png" alt="Mata Mosquito"></picture>
+
+  <div class="opicoes">
+    <select name="" id="nivel">
+      <option value="select">Selecionar o Nível</option>
+      <option value="normal">Normal</option>
+      <option value="dificil">Difícil</option>
+      <option value="onFire">On Fire</option>
+    </select>
+  </div>
+  <div class="iniciarBtn">
+    <button type="button" class="iniciar" onclick="iniciarJogo()">Iniciar Jogo</button>
+  </div>
+
+  <script>
+    function iniciarJogo() {
+      let dificuldade = document.querySelector('#nivel').value;
+      if (dificuldade === 'select') {
+        alert('Por favor, selecione um nível.');
+        return false;
+      } else {
+        window.location.href = `./game.html?${dificuldade}`;
+      }
+
+    }
+  </script>
+</body>
+
+</html>
